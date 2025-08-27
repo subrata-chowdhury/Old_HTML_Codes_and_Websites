@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<tital></tital>
+	</head>
+	<body>
+		<style>
+			body
+			{margin: 0;
+			 padding: 0;
+			  width:100%;
+			   height: 100%;
+			    display: flex;
+			     align-items: center;
+			      justify-content: center;
+			       background: #fff;}
+			div
+			{position: relative;
+			 width: 100px;
+			  margin-top: 200px;
+			   height: 100px;
+			    background: rgba(0,0,0,0);
+			     transform: rotate(-30deg) skew(25deg) scale(0.7);
+			      transition: 0.5s;}
+			.container1
+			{left: -60px;}
+			.container2
+			{left: 0px;}
+			.container3
+			{left: 60px;}
+			.container4
+			{left: 120px;}
+			div img
+			{position: absolute;
+			 width: 100%;
+			  transition: 0.5s;
+			   border-radius: 15%} 
+			div:hover img:nth-child(4)
+			{transform: translate(80px,-80px);
+			 opacity: 1;}
+			div:hover img:nth-child(3)
+			{transform: translate(60px,-60px);
+			 opacity: 0.8;}
+			div:hover img:nth-child(2)
+			{transform: translate(40px,-40px);
+			 opacity: 0.6;}
+			div:hover img:nth-child(1)
+			{transform: translate(20px,-20px);
+			 opacity: 0.4;}
+		</style>
+		<div class="container1">
+			<img src="whatsapp3.jpg">
+			<img src="whatsapp3.jpg">
+			<img src="whatsapp3.jpg">
+			<img src="whatsapp3.jpg">
+		</div>
+		<div class="container2">
+			<img src="facebook.png">
+			<img src="facebook.png">
+			<img src="facebook.png">
+			<img src="facebook.png">
+		</div>
+		<div class="container3">
+			<img src="twitter.png">
+			<img src="twitter.png">
+			<img src="twitter.png">
+			<img src="twitter.png">
+		</div>
+		<div class="container4">
+			<img src="instagram (1).png">
+			<img src="instagram (1).png">
+			<img src="instagram (1).png">
+			<img src="instagram (1).png">
+		</div>
+	</body>
+</html>

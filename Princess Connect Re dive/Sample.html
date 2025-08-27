@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#pic,#pic1,#pic2
+		{
+			height: 90%;
+			position: absolute;
+			top: 55%;
+			transform: translate(0%,-50%);
+			z-index: 1;
+			cursor: pointer;
+		}
+		#pic
+		{
+			left: 5%;
+		}
+		#pic1
+		{
+			left: 40%;
+		}
+		#pic2
+		{
+			left: 65%;
+			height: 80%;
+			top: 60%;
+		}
+		a
+		{
+			cursor: pointer;
+			font-size: 20px;
+			font-family: verdana;
+			background: dodgerblue;
+			text-decoration: none;
+			padding-left: 20px;
+			padding-top: 15px;
+			padding-right: 20px;
+			padding-bottom: 15px;
+			border-radius: 10px;
+			color: #fff;
+			position: relative;
+			top: 10px;
+			z-index: 2;
+			
+		}
+		a:after
+		{
+			content: "Click";
+			position: absolute;
+			top: 0px;
+			left: 160px;
+			color: #fff;
+			background: orange;
+			padding: 15px;
+			border-radius: 10px;
+			opacity: 0;
+			transition: 0.4s;
+		}
+		a:before
+		{
+			content: '';
+			position: absolute;
+			top: 20px;
+			left: 155px;
+			width: 15px;
+			height: 15px;
+			background: orange;
+			transform: rotate(45deg);
+			opacity: 0;
+			transition: 0.4s;
+		}
+		a:hover:after
+		{
+			opacity: 1;
+			left: 190px;
+		}
+		a:hover:before
+		{
+			opacity: 1;
+			left: 185px;
+		}
+		div
+		{
+			position: relative;
+			padding-top: 5%;
+		}
+		span
+		{
+			position: relative;
+			font-size: 40px;
+			font-family: verdana;
+			left: 25%;
+			top: -10px;
+			padding-left: 80px;
+			padding-right: 80px;
+		}
+	</style>
+</head>
+<body>
+	<span>Pecorine</span><span>Kokkoro</span><span>Kyaru</span>
+	<audio src="Princess Connect Re Dive Pecorine's Voice.mp3" id="audio"></audio>
+	<img src="Pecorine_sprite_normal.png" id="pic" onclick="document.getElementById('audio').src = 'Princess Connect Re Dive Pecorine Voice.mp3';document.getElementById('audio').play();">
+	<img src="Kokkoro-astrum1-sprite-normal.png" id="pic1" onclick="document.getElementById('audio').src = 'Princess Connect Re Dive Kokkoro Voice.mp3';document.getElementById('audio').play();">
+	<img src="Kyaru-astrum2-sprite-normal.png" id="pic2" onclick="document.getElementById('audio').src = 'Princess Connect Re Dive Karyl Voice.mp3';document.getElementById('audio').play();">
+	<div>
+		<a onclick="document.getElementById('pic').src = 'Pecorine_sprite_normal.png'; document.getElementById('pic1').src = 'Kokkoro-astrum1-sprite-normal.png'; document.getElementById('pic2').src = 'Kyaru-astrum2-sprite-normal.png'; document.getElementById('pic1').style.cssText = 'left: 40%; height: 90%; top: 55%;'; document.getElementById('pic2').style.cssText = 'height: 80%; top: 60%'; document.getElementById('pic').style.cssText = 'height: 90%; top: 55%; left: 5%;'">Normal Dress</a>
+	</div>
+	<div>
+		 <a onclick="document.getElementById('pic').src = 'Pecorine-princess-sprite-normal.png'; document.getElementById('pic1').src = 'Kokkoro-princess-sprite-normal.png'; document.getElementById('pic2').src = ''; document.getElementById('pic1').style.cssText = 'left: 45%; height: 100%; top: 50%;'; document.getElementById('pic2').style.cssText = 'height: 80%; top: 60%'; document.getElementById('pic').style.cssText = 'height: 85%; top: 57.5%; left: 15%;'">Princess</a>
+	</div>
+	<div>
+		<a onclick="document.getElementById('pic').src = 'Pecorine-summer-sprite-normal.png'; document.getElementById('pic1').src = 'Kokkoro-summerreal-sprite-normal.png'; document.getElementById('pic2').src = 'Kyaru-summer-sprite-normal.png';  document.getElementById('pic1').style.cssText = 'left: 40%; height: 75%; top: 62.5%;'; document.getElementById('pic2').style.cssText = 'height: 80%; top: 60%'; document.getElementById('pic').style.cssText = 'height: 90%; top: 55%; left: 10%;'">Suiming Suit</a>
+	</div>
+	<div>
+		<a onclick="document.getElementById('pic').src = 'Pecorine-newyear-sprite-normal.png'; document.getElementById('pic1').src = 'Kokkoro-newyear-sprite-normal.png'; document.getElementById('pic2').src = 'Kyaru-newyear-sprite-normal.png'; document.getElementById('pic1').style.cssText = 'left: 35%; height: 80%; top: 60%;'; document.getElementById('pic2').style.cssText = 'height: 85%; top: 57.5%'; document.getElementById('pic').style.cssText = 'height: 90%; top: 55%; left: 5%;'">In Kimono</a>
+	</div>
+	<div>
+		<a onclick="document.getElementById('pic').src = 'Pecorine-real-sprite-normal (1).png'; document.getElementById('pic1').src = 'Kokkoro-real-sprite-normal.png'; document.getElementById('pic2').src = 'Kyaru-real-sprite-normal.png'; document.getElementById('pic2').style.cssText = 'height: 85%; top: 62.5%;'; document.getElementById('pic1').style.cssText = 'left: 40%; height: 75%; top: 62.5%;'; document.getElementById('pic').style.cssText = 'height: 85%; top: 62.5%; left: 10%;'">Modern Dress</a>
+	</div>
+</body>
+</html>

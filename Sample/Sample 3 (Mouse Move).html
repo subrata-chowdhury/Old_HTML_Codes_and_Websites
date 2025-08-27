@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+	body
+	{
+		width: 99%;
+		min-height: 90vh;
+		cursor: none;
+	}
+	#dir
+	{
+		width: 50px;
+		height: 50px;
+		background: dodgerblue;
+		border-radius: 50%;
+		position: absolute;
+		transform: translate(-50%,-50%);
+		animation: any 10s linear infinite;
+	}
+	@keyframes any
+	{
+		0%
+		{
+			filter: hue-rotate(0deg);
+		}
+		100%
+		{
+			filter: hue-rotate(360deg);
+		}
+	}
+</style>
+<script type="text/javascript">
+	function any() {
+		var a = document.getElementById('div');
+		var b = event.clientX;
+		var c = event.clientY;
+		a.innerHTML = '(' + b + ',' + c + ')';
+		var d = document.getElementById('dir');
+		d.style.cssText = 'left: ' + b + 'px;' + 'top: ' + c + 'px;';
+	}
+	var i = setInterval(any, 100);
+</script>
+<body onmousemove="any()">
+	<div id="dir"></div>
+	<p id="div"></p>
+</body>
+</html>

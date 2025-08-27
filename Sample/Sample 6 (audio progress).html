@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function name() {
+			var a = document.getElementById('audio');
+			var b = a.currentTime;
+			var c = document.getElementById('p');
+			c.innerHTML = b;
+		}
+		var i = setInterval(name,100);
+	</script>
+</head>
+<body>
+	<audio src="C:\Users\Subrata Chowdhury\Music\Songs\English Songs\TheFatRat\TheFatRat & Anjulie - Close To The Sun.mp3" id="audio" controls=""></audio>
+	<p id="p">duration</p>
+</body>
+</html>

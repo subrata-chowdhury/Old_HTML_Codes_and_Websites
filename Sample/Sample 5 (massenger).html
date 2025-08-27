@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.main
+		{
+			width: 350px;
+			height: 600px;
+			background: lightgreen;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+			border-radius: 10px;
+		}
+		.send_button
+		{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			background: dodgerblue;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			position: absolute;
+			bottom: 10px;
+			right: 10px;
+		}
+		.my_msg_con
+		{
+			
+			max-width: 60%;
+			padding: 2px;
+			padding-left: 25px;
+			border-radius: 20px;
+			background: #fff;
+			position: relative;
+			top: 120px;
+			left: 30%;
+			font-size: 20px;
+			font-family: verdana;
+		}
+		.msg_box
+		{
+			outline: none;
+			width: 240px;
+			height: 20px;
+			position: absolute;
+			bottom: 12.5px;
+			left: 20px;
+			border: none;
+			padding: 10px;
+			border-radius: 40px;
+		}
+		.other_msg
+		{
+			width: 10%;
+			height: 25px;
+			padding: 2px;
+			padding-left: 25px;
+			border-radius: 20px;
+			background: #fff;
+			position: absolute;
+			top: 50px;
+			left: 15px;
+			font-size: 20px;
+			font-family: verdana;
+		}
+	</style>
+	<script type="text/javascript">
+		function send_msg() {
+			var a = document.getElementById('msg_box');
+			var b = a.value;
+			var f = b.length;
+			var c = document.getElementById('send_button');
+			var d = document.getElementById('my_msg');
+			var e = document.getElementById('my_msg_con');
+			d.innerHTML = d.innerHTML + '<div class="my_msg_con">' + b + '</div><br>';
+			a.value = '';
+		};
+		
+	</script>
+</head>
+<body>
+	<div class="main">
+		<div class="menu_bar" id="menu_bar"></div>
+		<div class="my_msg" id="my_msg"></div>
+		<div class="other_msg" id="other_msg">Hi</div>
+		<input type="text" name="" class="msg_box" id="msg_box">
+		<div class="send_button" id="send_button" onclick="send_msg()"></div>
+	</div>
+</body>
+</html>

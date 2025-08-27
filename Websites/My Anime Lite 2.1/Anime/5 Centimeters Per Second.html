@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Loader--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	<script>
+		/*var over = document.getElementById("loadercon");
+*//*optional, this line have no use*/
+window.addEventListener('load', function(){
+  loadercon.style.display = 'none';
+})
+	</script>
+	<style>
+ 		.loadercon
+ 		{
+ 			height: 100%;
+ 			width: 100%;
+ 			background: #fff;
+ 			z-index: 20;
+ 			position: fixed;
+ 		}
+ 		.mainlcon
+ 		{
+ 			position: absolute;
+ 			top: 50%;
+ 			left: 50%;
+ 			height: 200px;
+ 			width: 200px;
+ 			transform: translate(-50%,-50%);
+ 		}
+		.mainl
+		{
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			border: 10px solid transparent;
+			border-top: 10px solid dodgerblue;
+			border-left: 10px solid dodgerblue;
+			animation: any1 1s linear infinite;
+		}
+		.mainl2
+		{
+			position: absolute;
+			left: 25px;
+			top: 25px;
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			border: 10px solid transparent;
+			border-bottom: 10px solid yellow;
+			border-left: 10px solid yellow;
+			animation: any2 2s linear infinite;
+		}
+		.mainl1
+		{
+			position: absolute;
+			top: 50px;
+			left: 50px;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			border: 10px solid transparent;
+			border-top: 10px solid red;
+			border-right: 10px solid red;
+			animation: any1 1s linear infinite;
+		}
+		.mainl3
+		{
+			position: absolute;
+			top: 75px;
+			left: 75px;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			border: 10px solid transparent;
+			border-top: 10px solid orange;
+			border-right: 10px solid orange;
+			animation: any2 1s linear infinite;
+		}
+		@keyframes any1
+		{
+			0%
+			{
+				transform: rotate(0deg);
+			}
+			100%
+			{
+				transform: rotate(360deg);
+			}
+		}
+		@keyframes any2
+		{
+			0%
+			{
+				transform: rotate(0deg);
+			}
+			100%
+			{
+				transform: rotate(-360deg);
+			}
+		}
+	</style>
+	<div class="loadercon" id="loadercon">
+		<div class="mainlcon">
+			<div class="mainl"></div>
+			<div class="mainl2"></div>
+			<div class="mainl1"></div>
+			<div class="mainl3"></div>
+			<div class="mainl4"></div>
+		</div>		
+	</div>
+	<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------Loader End--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	<style>
+		.theme
+		{
+			width: 100%;
+			filter: blur(5px);
+			position: absolute;
+			z-index: -1;
+		}
+		.walltheme
+		{
+			width: 90%;
+			position: relative;
+			left: 5%;
+			top: 50px;
+			border-radius: 10px;
+		}
+		.con1
+		{
+			width: 80%;
+			box-shadow: 0 5px 20px #000;
+			border-radius: 10px;
+			top: 70px;
+			position: relative;
+			background: #fff;
+			padding: 15px;
+		}
+		.ans
+		{
+			color: dodgerblue;
+			font-family: verdana;
+			font-size: 22px;
+		}
+		.info
+		{
+			font-size: 22px;
+			font-family: verdana;
+			position: relative;
+			left: 10%;
+			width: 70%;
+		}
+		li
+		{
+			text-align: left;
+		}
+		.image
+		{
+			width: 200px;
+			border-radius: 10px;
+		}
+		.charac
+		{
+			position: relative;
+			width: 60%;
+			height: 750px;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 20px #000;
+			top: 110px;
+			background: #fff;
+		}
+		.head
+		{
+			color: #000;
+			font-family: verdana;
+			font-size: 30px;
+		}
+		.jwwyn
+		{
+			position: relative;
+			top: 10px;
+			height: 30%;
+			width: 40%;
+		}
+		.imgcon
+		{
+			float: left;
+			padding: 20px;
+			position: relative;
+			left: 50px;
+		}
+		.menubar
+		{
+			width: 100%;
+			height: 70px;
+			background: dodgerblue;
+			border-radius: 5px;
+			position: fixed;
+			z-index: 4;
+		}
+		.profile
+		{
+			width: 55px;
+			height: 55px;
+			border-radius: 50%;
+			background: #fff;
+			position: absolute;
+			left: 40px;
+			top: 7px;
+			cursor: pointer;
+			z-index: 3;
+		}
+		.signinper
+		{
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			cursor: pointer;
+			z-index: 3;
+		}
+		.option
+		{
+			font-size: 25px;
+			font-family: Verdana;
+			top: 0;
+			position: relative;
+			float: right;
+			color: white;
+			padding-left: 35px;
+			padding-right: 35px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			text-decoration: none;
+			z-index: 3;
+		}
+		.option:hover
+		{
+			background: rgba(255,255,255,0.4);
+		}
+		.option:active
+		{
+			background: rgba(255,255,255,0.7);
+		}
+		.signinp
+		{
+			font-size: 25px;
+			font-family: verdana;
+			position: absolute;
+			color: #fff;
+			left: 110px;
+			top: -5px;
+			z-index: 3;
+		}
+		.top
+		{
+			position: fixed;
+			bottom: 40px;
+			right: 50px;
+			height: 70px;
+			width: 70px;
+			border-radius: 50%;
+			background: yellow;
+			z-index: 3; 
+			text-align: center;
+			text-decoration: none;
+			transition: 0.5s;
+			opacity: 0.7;
+		}
+		.topp
+		{
+			position: relative;
+			top: 3px;
+			width: 50px;
+			left: 0px;
+			color: dodgerblue;
+			font-family: verdana;
+			font-size: 16px;
+		}
+		.top:hover
+		{
+			box-shadow: 0 0 0 30px gold,
+						0 0 0 60px orange;
+		}
+		.a1,.a2
+		{
+			text-decoration: none;
+			padding-left: 30px;
+			padding-right: 30px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			font-size: 30px;
+			color: #fff;
+			border-radius: 10px;
+		}
+		.a1
+		{
+			background: orange;
+		}
+		.a2
+		{
+			background: dodgerblue;
+		}
+	</style>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------For Mobile--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	<style>
+	
+		.menuicon
+		{
+			display: none;
+			height: 30px;
+			width: 30px;
+			position: fixed;
+			top: 9px;
+			left: 10px;
+			z-index: 5;
+			padding-top: 5px;
+			padding-left: 7px;
+			padding-bottom: 5px;
+			padding-right: 7px;
+			border-radius: 5px;
+			background: dodgerblue;
+			cursor: pointer;
+		}
+		.menuiconcheck
+		{
+			opacity: 0;
+			height: 30px;
+			width: 30px;
+			position: fixed;
+			top: 9px;
+			left: 10px;
+			z-index: 5;
+			cursor: pointer;
+		}
+		@media (max-width:768px)
+		{
+			body
+			{
+				margin: 4px;
+			}
+			.menubar
+			{
+				position: fixed;
+				width: 60%;
+				border-radius: 3px;
+				transition: 2s;
+				height: 300px;
+				display: none;
+				z-index: 4;
+			}
+			.profile
+			{
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+				background: #fff;
+				position: absolute;
+				left: 70px;
+				top: 10px;
+				cursor: pointer;
+				z-index: 3;
+			}
+			.signinp
+			{
+				font-size: 15px;
+				font-family: verdana;
+				position: absolute;
+				color: #fff;
+				left: 105px;
+				top: 0px;
+				z-index: 3;
+			}
+			.option
+			{
+				font-size: 22px;
+				font-family: Verdana;
+				top: 50px;
+				text-align: center;
+				position: relative;	
+				color: white;
+				width: 100%;
+				padding-left: 0px;
+				padding-right: 0px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				text-decoration: none;
+				z-index: 3;
+			
+			}
+			.menuicon,.menuiconcheck
+			{
+				display: block;
+			}
+			.menuiconcheck:checked ~ .menubar
+			{
+				display: block;
+			}
+			.walltheme
+			{
+				width: 95%;
+				left: 10px;
+				top: 15px;
+			}
+			.con1
+			{
+				width: 85%;
+				top: 20px;
+			}
+			.a1,.a2
+			{
+				font-size: 15px;
+				border-radius: 4px;	
+				padding-top: 7px;
+				padding-bottom: 7px;
+				padding-left: 15px;
+				padding-right: 15px;	
+			}
+			.info,.ans
+			{
+				font-size: 15px;
+				left: 0%;
+			}
+			.head
+			{
+				font-size: 20px;
+			}
+			.charac
+			{
+				width: 85%;
+				height: 530px;
+			}
+			.top
+			{
+				width: 60px;
+				height: 60px;
+			}
+			.topp
+			{
+				font-size: 15px;
+				position: absolute;
+				left: 4px;
+				top: 13px;
+			}
+			.image
+			{
+				width: 129px;
+				border-radius: 5px;
+			}
+			.imgcon
+			{
+				left: 0px;
+				padding: 10px;
+			}
+		}
+	</style>
+	<img class="menuicon" src="Icons\unnamed.png"></img>
+	<input type="checkbox" name="" class="menuiconcheck">
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------For Mobile End--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<a href="#" class="top"><p><b class="topp">Go To Top</b></p></a>
+	<div class="menubar">
+	<b>
+		<a href="Sign In.html">
+			<div class="profile">
+				<img class="signinper" src="Princess Mononoke\Person.png">
+			</div>
+			<p class="signinp">Sign Up</p>
+		</a>
+		<a href="Details.html" class="option">Details</a>
+		<a href="More.html" class="option">More</a>
+		<a href="About.html" class="option">About</a>
+		<a href="My Animes (Version 2.1).html" class="option">Home</a>
+		<a href="5 Centimeters Per Second (Dark).html" class="option">Darkmode</a>
+	</b>
+	</div>
+	<b>
+	<div class="main">
+		<img class="theme" src="5 cm Per Second\5 cm per Second theme.jpeg">
+		<img class="walltheme" src="5 cm Per Second\5 cm per Second theme 2.jpg">
+		<center>
+		<div class="con1">
+			<p class="info">
+				<ol class="info">
+					<p class="head" style="position: relative; left: -10%;">Details</p>
+					<p class="head" style="position: relative; left: -10%">Anime Film</p>
+					<li>IMDb Rating: <a class="ans"> 7.6/10</a><br></li>
+					<li>MyAnimeList: <a class="ans"> 7.8/10</a><br></li>
+					<li>Directed by: <a class="ans">Makoto Shinkai</a><br></li>
+					<li>Produced by: <a class="ans">Makoto Shinkai</a><br></li>
+					<li>Written by: <a class="ans">Makoto Shinkai</a><br></li>
+					<li>Music by: <a class="ans">Tenmon</a><br></li>
+					<li>Studio: <a class="ans">CoMix Wave Inc.</a><br></li>			
+					<li>Licensed by: i.<a class="ans">Madman Entertainment</a><br>
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ii.<a class="ans">Discotek Media</a><br>
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;iii.<a class="ans">Manga Entertainment</a><br></li>
+					<li>Release date: <a class="ans">March 3,2007</a><br></li>
+					<li>Runing time: <a class="ans">65 minutes</a><br></li>
+					<li>Country: <a class="ans">Japan</a><br></li>
+					<p class="head" style="position: relative; left: -20%">Novel</p>
+					<li>Written By: <a class="ans">Makoto Shinkai</a><br></li>
+					<li>Published By: <a class="ans">Media Factory</a><br></li>
+					<li>Published: <a class="ans">November 19,2007</a><br></li>
+					<p class="head" style="position: relative; left: -20%">Manga</p>
+					<li>Written By: <a class="ans">Makoto Shinkai</a><br></li>
+					<li>Illustrated By: <a class="ans">Seike Yukiko</a><br></li>
+					<li>Published by: <a class="ans">Kodansha</a><br></li>
+					<li>English Publisher: <a class="ans">Vertical Inc.</a><br></li>
+					<li>Magazine: <a class="ans">Monthly Afternoon</a><br></li>
+					<li>Demographic: <a class="ans">Seinen</a><br></li>
+					<li>Original Run: <a class="ans">July 2010- June 2011</a><br></li>
+					<li>Volumes: <a class="ans">2</a><br></li>
+					<p class="head" style="position: relative; left: -20%">Novel</p>
+					<p class="head" style="position: relative; left: -20%">5 Centimeters Per Seconds: One More Side</p>
+					<li>Written By: <a class="ans">Arata Kanoh</a><br></li>
+					<li>Published by: <a class="ans">Enterbrain</a><br></li>
+					<li>English Publisher: <a class="ans">Penguin Random House</a><br></li>
+					<li>Published: <a class="ans">May 20,2011</a><br></li>
+				</ol>
+				<p class="head" style="position: relative; left: -10px;">Other Links</p>
+				<a class="a1" href="#">Watch Trailer</a>
+				<a class="a2" href="#">Watch Full Movie</a>
+			</p>
+		</div>
+		<div class="charac">
+			<p class="head">Movie Characters</p>
+			<div class="imgcon">
+				<img class="image" src="5 cm Per Second\Teen_Tono.jpg">
+				<p><a class="ans">Takaki Tono</a></p>
+			</div>
+			<div class="imgcon">
+				<img class="image" src="5 cm Per Second\images (2).jpeg">
+				<p><a class="ans">Akari Shinohara</a></p>
+			</div>
+			<div class="imgcon">
+				<img class="image" src="5 cm Per Second\images (3).jpeg">
+				<p><a class="ans">Kanae Sumida</a></p>
+			</div>
+			<div class="imgcon">
+				<img class="image" src="5 cm Per Second\Risa Mizuno.jpg">
+				<p><a class="ans">Risa Mizuno</a></p>
+			</div>
+			<div class="imgcon">
+				<img class="image" src="5 cm Per Second\Kanae_Sumida's_sister.png">
+				<p><a class="ans">Miho Sumida</a></p>
+			</div>
+		</div>
+		</center>
+	</div>
+	</b>
+</body>
+</html>

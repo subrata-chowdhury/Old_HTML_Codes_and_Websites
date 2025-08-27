@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<style type="text/css">
+		.main-img
+		{
+			width: 100%;
+			min-width: 360px;
+			position: absolute;
+			top: 0;
+			left: 0px;
+			z-index: -1;
+			filter: blur(0px);
+		}
+		/*
+
+
+
+
+
+
+
+		-----menubar------
+
+
+
+
+
+
+
+		*/
+		.menu-bar
+		{
+			position: fixed;
+			z-index: 2;
+			top: 0px;
+			padding: 50px 15px;
+			animation: menu-bar_top 1.5s;
+			width: 300px;
+			height: 100%;
+			left:  -400px;
+			transition: 0.5s;
+			background: dodgerblue;
+		}
+		.menu
+		{
+			font-size: 1.7em;
+			position: relative;
+			font-family: verdana;
+			right: 50px;
+			height: 60px;
+			left: 20px;
+			top: 160px;
+		}
+		.menu-link
+		{
+			text-decoration: none;
+			color: #fff;
+			font-size: 32px;
+			transition: 0.4s;
+		}
+		.sign-up
+		{
+			position: absolute;
+			width: 200px;
+			top: 40px;
+			left: 50px;
+			text-decoration: none;
+			color: #fff;
+			z-index: 2;
+		}
+		.sign-up-para
+		{
+			font-family: verdana;
+			position: absolute;
+			top: 75px;
+			font-size: 32px;
+			width: 180px;
+			left: -10px;
+		}
+		.sign-up-para:hover
+		{
+			opacity: 0.7;
+		}
+		.menu-link:hover
+		{
+			opacity: 0.7;
+		}
+		#menu-bar-icon
+		{
+			position: fixed;
+			width: 100%;
+			z-index: 3;
+			top: 0px;
+			left: 0;
+			background: dodgerblue;
+			height: 50px;
+			animation:  1s;
+		}
+
+		#menu-bar-icon-line1,#menu-bar-icon-line2,#menu-bar-icon-line3
+		{
+			width: 35px;
+			height: 5px;
+			background: #fff;
+			position: relative;
+			top: 3px;
+			left: 5px;
+			margin: 7px;
+			transition: 0.5s;
+			border-radius: 1.5px;
+		}
+		#menu-bar-check
+		{
+			width: 50px;
+			height: 50px;
+			position: fixed;
+			top: -5px;
+			left: -5px;
+			cursor: pointer;
+			z-index: 3;
+			-webkit-appearance: none;
+			outline: none;
+		}
+		/*
+
+
+
+
+
+
+
+		-----Table Content------
+
+
+
+
+
+
+
+		*/
+		table
+		{
+			position: relative;
+		}
+		.header-para_part1,.header-para_part2
+		{
+			position: relative;
+			font-family: verdana;
+			left: 50px;
+			transform: translate(0,-50%);
+		}
+		.header-para_part1
+		{
+			font-size: 2em;
+			top: 120px;
+		}
+		.header-para_part2
+		{
+			font-size: 3.2em;
+			top: 90px;
+		}
+		.movie1,.movie2
+		{
+			width: 520px;
+			height: 400px;
+			background: #fff;
+			border-radius: 15px;
+			box-shadow: 0 0 30px rgba(30, 144, 255, 0.2),
+						0 0 10px rgba(30, 144, 255, 0.2);
+		}
+		.movie_left
+		{
+			position: relative;
+			left: 50px;
+		}
+		.movie_right
+		{
+			position: relative;
+			left: 52%;
+			top: -320px;
+			width: 50%;
+			text-align: left;
+			transition: 1s;
+		}
+		.movie1-pic,.movie2-pic,.movie3-pic,.movie4-pic,.movie5-pic,.movie6-pic,.movie7-pic,.movie8-pic,.movie9-pic,.movie10-pic,.movie11-pic,.movie12-pic,.movie13-pic,.movie14-pic,.movie15-pic,.movie16-pic,.movie17-pic,.movie18-pic,.movie19-pic,.movie20-pic,.movie21-pic,.movie22-pic,.movie23-pic,.movie24-pic,.movie25-pic,.movie26-pic,.movie27-pic,.movie28-pic,.movie29-pic,.movie30-pic,.movie31-pic,.movie32-pic,.movie33-pic,.movie34-pic,.movie35-pic,.movie36-pic,.movie37-pic,.movie38-pic,.movie39-pic,.movie40-pic,.movie41-pic,.movie42-pic,.movie43-pic
+		{
+			height: 360px;
+			border-radius: 5px;
+			position: relative;
+			top: 20px;
+			left: 100px;
+			transform: translate(-50%,0%);
+		}
+		.movie-name
+		{
+			font-size: 1.2em;
+			font-family: verdana;
+			text-decoration: none;
+			width: 80%;
+			position: relative;
+			left: 50%;
+			transition: 1s;
+			transform: translate(-50%,0);
+		
+		}
+		.watch_link
+		{
+			position: relative;
+			bottom: -50px;
+			text-decoration: none;
+			color: #fff;
+			background: orange;
+			font-size: 22px;
+			font-family: verdana;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 20px;
+			padding-right: 20px;
+			border-radius: 10px;
+		}
+		.divider
+		{
+			font-size: 2em;
+			color: purple;
+			font-family: verdana;
+		}
+		.container
+		{
+			width: 88%;
+			position: relative;
+			top: 380px;
+			padding-bottom: 50px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		/*
+
+
+
+
+
+
+
+		-----Title------
+
+
+
+
+
+
+
+		*/
+		.head
+		{
+			font-size: 4em;
+			font-family: verdana;
+			position: relative;
+			top: -80px;
+			left: 0px;
+			color: dodgerblue;
+			border-radius: 10px;
+			/*box-shadow: 0 0 0 50vh rgba(0,0,0,0.2),
+						inset 0 0 0 50vh rgba(0,0,0,0.2);*/
+			animation: changecolor 7s linear infinite;
+		}
+		#first-para
+		{
+			font-size: 22px;
+			font-family: verdana;
+			position: relative;
+			top: -100px;
+			left: 0px;
+			width: 500px;
+		}
+		#first-para-div
+		{
+			padding: 50px;
+			width: 550px;
+			height: 280px;
+			background: rgba(255,255,255,0.9);
+			box-shadow: 0 0 2px rgba(255,255,255,1);
+			position: absolute;
+			top: 90px;
+			border-radius: 10px;
+			left: 50%;
+			transform: translate(-50%,0);
+		}
+		/*
+
+
+
+
+
+
+
+		-----Others------
+
+
+
+
+
+
+
+		*/
+		.gtt
+		{
+			height: 80px;
+			width: 80px;
+			background: dodgerblue;
+			position: fixed;
+			bottom: 50px;
+			right: 50px;
+			border-radius: 50%;
+			z-index: -2;
+			opacity: 0;
+			transition: 1.5s;
+			cursor: pointer;
+		}
+		.gtti
+		{
+			font-size: 2.5em;
+			position: relative;
+			top: -25px;
+			color: #fff;
+			transform: rotate(90deg);
+			animation: gototop 1s linear infinite;
+		}
+		/*
+
+
+
+
+
+
+
+		-----Footer------
+
+
+
+
+
+
+
+		*/
+		.last
+		{
+			height: 700px;
+			width: 100%;
+			min-width: 600px;
+			background: #172727;
+			position: relative;
+			top: 100vh;
+		}
+		.last-div1-head,.last-div2-head
+		{
+			position: relative;
+			color: #fff;
+			font-size: 22px;
+			font-family: verdana;
+		}
+		.last-div1:after,.last-div2:after,.last-div3:after
+		{
+			content: '';
+			position: absolute;
+			width: 120px;
+			height: 4px;
+			background: #fff;
+			border-radius: 2px;
+			top: 55px;
+			left: 0;
+		}
+		.last-div2:after
+		{
+			top: 30px;
+		}
+		.last-div1,.last-div2,.last-div3
+		{
+			top: 70px;
+			position: absolute;
+			color: #fff;
+			width: 250px;
+		}
+		.last-div2
+		{
+			left: 100px;
+			width: 200px;
+			position: relative;
+			top: 440px;
+		}
+		.last-div1
+		{
+			left: 100px;
+			width: 200px;
+		}
+		.last-div3
+		{
+			left: 55%;
+			width: 200px;
+		}
+		.last-div1-link
+		{
+			position: relative;
+			color: #fff;
+			text-decoration: none;
+			font-family: verdana;
+			font-size: 18px;
+		}
+		.last-div2-p
+		{
+			position: relative;
+			color: #fff;
+			font-family: verdana;
+			font-size: 18px;
+		}
+		.last-div2-link
+		{
+			text-decoration: none;
+		}
+		.last-div2-link svg
+		{
+			width: 40px;
+			height: 40px;
+			padding: 10px;
+		}
+		.last-copyright
+		{
+			width: 100%;
+			position: absolute;
+			bottom: 0px;
+			background: midnightblue;
+			font-size: 20px;
+			font-family: verdana;
+			color: #fff;
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		/*
+
+
+
+
+
+
+
+		-----animation------
+
+
+
+
+
+
+
+		*/
+		@keyframes gototop
+		{
+			0%
+			{
+				top: -30px;
+			}
+			50%
+			{
+				top: -15px;
+			}
+			100%
+			{
+				top: -30px;
+			}
+		}
+		@keyframes changecolor
+		{
+			0%
+			{
+				filter: drop-shadow(0 0 60px #000) hue-rotate(0deg);
+			}
+			100%
+			{
+				filter: drop-shadow(0 0 60px #000) hue-rotate(360deg);
+			}
+		}
+		@keyframes menu-bar_top
+		{
+			0%
+			{
+				top: 200px;
+				opacity: 0;
+			}
+			100%
+			{
+				top: 0px;
+				opacity: 1;
+			}
+		}
+		#menu-bar-check:checked ~ #menu-bar
+		{
+			left: 0px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onscroll = function() {myFunction()};
+
+		function myFunction() {
+		  if (document.documentElement.scrollTop > 1000) {
+		    document.getElementById("gtt").style.cssText = 'opacity: 1; z-index: 2;';
+		  } else {
+		    document.getElementById("gtt").style.cssText = '';
+		  }
+		}
+		var i_of_menu_bar = setInterval(myFunction,100);
+		function gototop() {
+			document.documentElement.scrollTop = 0;
+		}
+		function menutocross() {
+			var a = document.getElementById('menu-bar-check');
+			var b = document.getElementById('menu-bar-icon-line1');
+			var c = document.getElementById('menu-bar-icon-line2');
+			var d = document.getElementById('menu-bar-icon-line3');
+			if (a.checked == true) {
+				b.style.cssText = 'transform: rotate(45deg); width: 40px; top: 15px; left: -2px;';
+				c.style.cssText = 'display: none;';
+				d.style.cssText = 'transform: rotate(-45deg); width: 40px; left: -2px;';
+			} else {
+				b.style.cssText = "";
+				c.style.cssText = '';
+				d.style.cssText = "";
+			}
+		}
+		function redirect() {
+			var a = screen.width;
+			if (a >= 720) {
+				location.replace("../List Of All Doraemon Movies  (Version 3.5).html");
+			} else {
+				
+			}
+		}
+		var I_of_redirect = setInterval(redirect,100);
+	</script>
+</head>
+<body>
+	<div class="main">
+		<b>
+		<a onclick="gototop()" class="gtt" id="gtt">
+			<center><b><p class="gtti"><</p></b></center>
+		</a>
+		<img src="../Doraemon Screenshorts/IMG_20200708_132336.jpg" class="main-img">
+		<div id="menu-bar-icon">
+			<div id="menu-bar-icon-line1"></div>
+			<div id="menu-bar-icon-line2"></div>
+			<div id="menu-bar-icon-line3"></div>
+		</div>
+		<input type="checkbox" id="menu-bar-check" onclick="menutocross()">
+		<div class="menu-bar" id="menu-bar">
+			<a href="Sign Up.html" class="sign-up" id="sign-up">
+				<p class="sign-up-para">Sign Up</p>
+			</a>
+			<div class="menu" id="menu" style="width: 210px;"><a href="Contact Me.Html" class="menu-link" id="ass">Contact Me</a></div>
+			<div class="menu" id="menu" style="width: 150px;"><a href="More.html" class="menu-link">More</a></div>
+			<div class="menu" id="menu" style="width: 160px;"><a href="Details.html" class="menu-link">Details</a></div>
+			<div class="menu" id="menu" style="width: 210px;">
+				<a href="List Of All Doraemon Movies  (Version 3.5)(Dark).html" class="menu-link" id="darkpara">Darkmode</a>
+			</div>
+			<div class="menu" id="menu" style="width: 150px;"><a href="#" class="menu-link" style="opacity: 0.7;">Home</a></div>
+		</div>
+		<div id="first-para-div">
+			<b><p class="head" id="head">My Animes</p></b>
+			<p id="first-para">Hi, My name is Subrata Chowdhury. I love to watch anime and Doraemon is one of my best anime that I watch, it was written by Fujiko & Fujio. This anime have many movies, so make this website "List of All Doraemon Movies".</p>
+		</div>
+		<div class="container" id="container">
+			<div class="header" id="header">
+				<p class="header-para_part1">List Of All</p><p class="header-para_part2"> Doraemon Movies</p>
+			</div>
+			<table border="0" cellpadding="20" cellspacing="20" align="center">
+				<tbody>
+					<tr>
+						<td>
+							<div class="movie1" id="movie1">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1980.jpg" class="movie1-pic">
+								</div>
+								<div class="movie_right">
+									<p class="movie-name">Name: Doraemon Nobita's Dinosaur</p>
+									<p class="movie-name">Release Year: 1980</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie2">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1981.jpg" class="movie2-pic">
+								</div>
+								<div class="movie_right">
+									<p class="movie-name">Name: Doraemon The Record of Nobita Spaceblazer</p>
+									<p class="movie-name">Release Year: 1981</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie3">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1982.jpg" class="movie3-pic">
+								</div>
+								<div class="movie_right">
+									<p class="movie-name">Name: Nobita And The Haunts of Evil (Old Version)</p>
+									<p class="movie-name">Release Year: 1982</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie4">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1983.jpg" class="movie4-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita's Monstrous Under Water Castle</p>
+									<p class="movie-name">Release Year: 1983</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie5">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1984.jpg" class="movie5-pic">
+								</div>		
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita's Great Adventure into Underworld</p>
+									<p class="movie-name">Release Year: 1984</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie6">
+							<div class="movie_left">	
+								<img src="Doraemon Movie Posters\1985.jpg" class="movie6-pic">
+							</div>	
+							<div class="movie_right">	
+								<p class="movie-name">Name: Doraemon Nobita's Little Star Wars</p>
+								<p class="movie-name">Release Year: 1985</p>
+								<center>
+									<a class="watch_link" href="#">Watch Here</a>
+								</center>
+							</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie7">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1986.jpg" class="movie7-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita and The Steel Troops (Old version)</p>
+									<p class="movie-name">Release Year: 1986</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>		
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie8">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1987.jpg" class="movie8-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita and The Knights of Dinosaur</p>
+									<p class="movie-name">Release Year: 1987</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie9">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1988.jpg" class="movie9-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita's Parallel "Journey to The West"</p>
+									<p class="movie-name">Release Year: 1988</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie10">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1989.jpg" class="movie10-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita and The Birth of Japan (Old Version)</p>
+									<p class="movie-name">Release Year: 1989</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie11">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1990.jpg" class="movie11-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita and The Animal Planet</p>
+									<p class="movie-name">Release Year: 1990</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie12">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1991.jpg" class="movie12-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita in Dorabian Nights</p>
+									<p class="movie-name">Release Year: 1991</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie13">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1992.jpg" class="movie13-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita and The Kingdom of Clouds</p>
+									<p class="movie-name">Release Year: 1992</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie14">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1993.jpg" class="movie14-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita and Tinplate Ladyrinth (Bhul Bhulaia)</p>
+									<p class="movie-name">Release Year: 1993</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie15">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1994.jpg" class="movie15-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita and The Fantastic Three Musketeers</p>
+									<p class="movie-name">Release Year: 1994</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie16">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1995.jpg" class="movie16-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita's Genesis Diary</p>
+									<p class="movie-name">Release Year: 1995</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie17">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1996.jpg" class="movie17-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita and The Galactic Express</p>
+									<p class="movie-name">Release Year: 1996</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie18">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1997.jpg" class="movie18-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita's Adventure in Clocwork City</p>
+									<p class="movie-name">Release Year: 1997</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie19">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1998.jpg" class="movie19-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita's South Sea Adventure</p>
+									<p class="movie-name">Release Year: 1998</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie20">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\1999.jpg" class="movie20-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita's Adventure Drifts in The Universe</p>
+									<p class="movie-name">Release Year: 1999</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie21">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2000.jpg" class="movie21-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita and The Leagend of Sunking</p>
+									<p class="movie-name">Release Year: 2000</p>
+									<center>
+										<a href="Doraemon Movie Yea Bhi Tha Nobita Wo Bhi Tha Nobita 480p.mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie22">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2001.jpg" class="movie22-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita and The Winged Braves</p>
+									<p class="movie-name">Release Year: 2001</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie23">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2002.jpg" class="movie23-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita and The Robot Kingdom</p>
+									<p class="movie-name">Release Year: 2002</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie24">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2003.jpg" class="movie24-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita and The Wind Wizard</p>
+									<p class="movie-name">Release Year: 2003</p>
+									<center>
+										<a href="Doraemon The Movie Toofani Adventure(2003)Hindi.mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie25">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2004.jpg" class="movie25-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita in The Wan-Nyan Spacetime Odyssey</p>
+									<p class="movie-name">Release Year: 2004</p>
+									<center>
+										<a href="Doraemon Movie Nobita Ichi Mera Dost in hindi 480p.mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+							<p class="divider">New Version</p>
+							<p style="font-family: verdana; font-size: 18px;">From 2005 Doraemon Movie Production Company Inproved There Graphic Quality.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie26">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2006.jpg" class="movie26-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">26. Doraemon Nobita's Dinosaur 2006</p>
+									<p class="movie-name">Release Year: 2006</p>
+									<center>
+										<a href="Doraemon Movie Nobita And New Dinosaur (2006).mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie27">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2007.jpg" class="movie27-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita's Great Adventure into The Underworld</p>
+									<p class="movie-name">Release Year: 2007</p>
+									<center>
+										<a href="Doraemon Movie Nobita Aur Jadu Mantar Jahanum 480p.mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>		
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie28">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2008.jpg" class="movie28-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita and The Legend of The Green Giant</p>
+									<p class="movie-name">Release Year: 2008</p>
+									<center>
+										<a href="Doraemon The Movie nobita Aur Hara Hara Planet In Hindi.mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie29">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2009.jpg" class="movie29-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon The New Record of Nobita Spaceblazer</p>
+									<p class="movie-name">Release Year: 2009</p>
+									<center>
+										<a href="Doraemon Movie Nobita Aur Koya Koya Planet In Hindi 480p.mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie30">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2010.jpg" class="movie30-pic">
+								</div>		
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita's Great Merman Sea Battle</p>
+									<p class="movie-name">Release Year: 2010</p>
+									<center>
+										<a href="Doraemon Movie Nobita Aur Ek Jalpari In Hindi 480p.mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie31">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2011.jpg" class="movie31-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita and The New Steel Troop: Angel Wings</p>
+									<p class="movie-name">Release Year: 2011</p>
+									<center>
+										<a href="Doraemon Movie Nobita And The Steel Troops In Hindi 720p.mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie32">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2012.jpg" class="movie32-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita and The Island of Miracles-Animal Adventure</p>
+									<p class="movie-name">Release Year: 2012</p>
+									<center>
+										<a href="Doraemon The Movie Nopita Aur Jadui Tapu.mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie33">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2013.jpg" class="movie33-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita's Secret Gadget Museum</p>
+									<p class="movie-name">Release Year: 2013</p>
+									<center>
+										<a href="Doraemon the movie Gaget Musium Ka Rahasyan in Hindi HD(720p).mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie34">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2014 (a).jpg" class="movie34-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon New Nobita’s Great Demon Peko and The Exploration Party of Five</p>
+									<p class="movie-name">Release Year: 2014</p>
+									<center>
+										<a href="Doraemon Movie Nobita And Explorer Bow Bow In Hindi 480p.mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie35">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2014 (b).jpg" class="movie35-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Stand By Me Doraemon</p>
+									<p class="movie-name">Release Year: 2014</p>
+									<center>
+										<a href="Doraemon Movie Stand by me in Hindi.mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie36">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2015.jpg" class="movie36-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita's Space Heroes</p>
+									<p class="movie-name">Release Year: 2015</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie37">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2016.jpg" class="movie37-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita And The Birth of Japan 2016(New Version)</p>
+									<p class="movie-name">Release Year: 2016</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie38">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2017.jpg" class="movie38-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon The Movie 2017 Nobita’s Great Adventure in The Antarctic Kochi Kochi</p>
+									<p class="movie-name">Release Year: 2017</p>
+									<center>
+										<a href="Doraemon   Nobita  Great Adventure in the Antarctic Kachi Kochi 2017 [ Malay & Hindi, Eng Subs ].mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie39">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2018.jpg" class="movie39-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon The Movie Nobita's Treasure Island</p>
+									<p class="movie-name">Release Year: 2018</p>
+									<center>
+										<a href="Doraemon The Movie Nobita’s Treasure Island In Hindi Subbed.mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie40">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2019.jpg" class="movie40-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita's Chronicle of The Moon Exploration</p>
+									<p class="movie-name">Release Year: 2019</p>
+									<center>
+										<a href="Doraemon New movie Nobita's chronicle of the Moon Exploration.mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>		
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie41">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2020 (a).jpg" class="movie41-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon Nobita's New Dinosaur</p>
+									<p class="movie-name">Release Year: 2020</p>
+									<center>
+										<a href="Doraemon Movie Nobita's New Dinosour 480p (2020).mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie1" id="movie42">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2020 (b).jpg" class="movie42-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Stand By Me Doraemon 2</p>
+									<p class="movie-name">Release Year: 2020</p>
+									<center>
+										<a href="Doraemon Stand By Me 2 English Subbed.mp4" class="watch_link">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="movie2" id="movie43">
+								<div class="movie_left">
+									<img src="Doraemon Movie Posters\2021.jpg" class="movie43-pic">
+								</div>	
+								<div class="movie_right">	
+									<p class="movie-name">Name: Doraemon: Nobita's Little Space Wars 2021</p>
+									<p class="movie-name">Release Year: 2021</p>
+									<center>
+										<a class="watch_link" href="#">Watch Here</a>
+									</center>
+								</div>	
+							</div>
+						</td>
+					</tr>
+					<!--
+					<tr>
+						<td>
+							<div class="movie44">
+								<img src="" class="movie44-pic">
+								<p class="movie-name"></p>
+								<center>
+									<a class="watch_link" href="#">Watch Here</a>
+								</center>
+							</div>
+						</td>
+					</tr>
+					-->
+				</tbody>
+			</table>
+		</div>
+		<div class="last">
+			<div class="last-div1">
+				<p class="last-div1-head">Other Links</p><br>
+				<a href="#" class="last-div1-link">About Me</a><br><br>
+				<a href="#" class="last-div1-link">FAQ</a><br><br>
+				<a href="#" class="last-div1-link">Privacy Policy</a><br><br>
+				<a href="#" class="last-div1-link">Help</a><br><br>
+				<a href="#" class="last-div1-link">Terms & Conditions</a><br><br>
+				<a href="#" class="last-div1-link">Donate</a><br><br>
+			</div>
+			<div class="last-div2">
+				<p class="last-div2-head">Contact Me</p>
+				<p class="last-div2-p">+91 93826 40789</p>
+				<p class="last-div2-p">subratachowdhury7000@gmail.com</p>
+				<a href="#" class="last-div2-link">
+					<svg version="1.1" id="Capa_1" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+						<path style="fill:#1976D2;" d="M448,0H64C28.704,0,0,28.704,0,64v384c0,35.296,28.704,64,64,64h384c35.296,0,64-28.704,64-64V64
+							C512,28.704,483.296,0,448,0z"/>
+						<path style="fill:#FAFAFA;" d="M432,256h-80v-64c0-17.664,14.336-16,32-16h32V96h-64l0,0c-53.024,0-96,42.976-96,96v64h-64v80h64
+							v176h96V336h48L432,256z"/>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+					</svg>
+				</a>
+				<a href="#" class="last-div2-link">
+					<svg enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" >
+						<linearGradient id="SVGID_1_" gradientTransform="matrix(0 -1.982 -1.844 0 -132.522 -51.077)" gradientUnits="userSpaceOnUse" x1="-37.106" x2="-26.555" y1="-72.705" y2="-84.047">
+							<stop offset="0" stop-color="#fd5"/>
+							<stop offset=".5" stop-color="#ff543e"/>
+							<stop offset="1" stop-color="#c837ab"/>
+						</linearGradient>
+						<path d="m1.5 1.633c-1.886 1.959-1.5 4.04-1.5 10.362 0 5.25-.916 10.513 3.878 11.752 1.497.385 14.761.385 16.256-.002 1.996-.515 3.62-2.134 3.842-4.957.031-.394.031-13.185-.001-13.587-.236-3.007-2.087-4.74-4.526-5.091-.559-.081-.671-.105-3.539-.11-10.173.005-12.403-.448-14.41 1.633z" fill="url(#SVGID_1_)"/>
+						<path d="m11.998 3.139c-3.631 0-7.079-.323-8.396 3.057-.544 1.396-.465 3.209-.465 5.805 0 2.278-.073 4.419.465 5.804 1.314 3.382 4.79 3.058 8.394 3.058 3.477 0 7.062.362 8.395-3.058.545-1.41.465-3.196.465-5.804 0-3.462.191-5.697-1.488-7.375-1.7-1.7-3.999-1.487-7.374-1.487zm-.794 1.597c7.574-.012 8.538-.854 8.006 10.843-.189 4.137-3.339 3.683-7.211 3.683-7.06 0-7.263-.202-7.263-7.265 0-7.145.56-7.257 6.468-7.263zm5.524 1.471c-.587 0-1.063.476-1.063 1.063s.476 1.063 1.063 1.063 1.063-.476 1.063-1.063-.476-1.063-1.063-1.063zm-4.73 1.243c-2.513 0-4.55 2.038-4.55 4.551s2.037 4.55 4.55 4.55 4.549-2.037 4.549-4.55-2.036-4.551-4.549-4.551zm0 1.597c3.905 0 3.91 5.908 0 5.908-3.904 0-3.91-5.908 0-5.908z" fill="#fff"/>
+					</svg>
+				</a>
+				<a href="#" class="last-div2-link">
+					<svg version="1.1" id="Capa_1" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+						<path style="fill:#03A9F4;" d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+							c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+							c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+							c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+							c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+							c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+							C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+							C480.224,136.96,497.728,118.496,512,97.248z"/>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+						<g>
+						</g>
+					</svg>
+				</a>
+			</div>
+			<div class="last-div3">
+				<p class="last-div2-head">Other Works</p>
+				<a href="#" class="last-div1-link">My Animes</a><br><br>
+				<a href="..\..\Animes\Anime Movies\My Anime Lite 2.1\Anime\My Animes (Version 2.1).html" class="last-div1-link">My Animes 2.1</a><br><br>
+				<a href="List Of All Doraemon Movies with 3D layer.html" class="last-div1-link">List Of All Doraemon Movies with 3D layer</a><br><br>
+				<a href="List Of All Doraemon Movies  (Version 2).html" class="last-div1-link">List Of All Doraemon Movies  (Version 2)</a><br><br>
+			</div>
+		</b>
+			<div class="last-copyright" align="center">Copyright(c) 2021 My Animes</div>
+		</div>
+	</div>
+</body>
+</html>

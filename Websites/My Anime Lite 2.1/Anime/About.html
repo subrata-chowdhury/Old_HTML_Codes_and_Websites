@@ -1,0 +1,329 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style>
+		.menubar
+		{
+			width: 100%;
+			height: 70px;
+			background: dodgerblue;
+			border-radius: 5px;
+		}
+		.profile
+		{
+			width: 55px;
+			height: 55px;
+			border-radius: 50%;
+			background: #fff;
+			position: absolute;
+			left: 40px;
+			top: 15px;
+			cursor: pointer;
+			z-index: 3;
+		}
+		.signinper
+		{
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			cursor: pointer;
+			z-index: 3;
+		}
+		.option
+		{
+			font-size: 25px;
+			font-family: Verdana;
+			top: 0;
+			position: relative;
+			float: right;
+			color: white;
+			padding-left: 35px;
+			padding-right: 35px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			text-decoration: none;
+			z-index: 3;
+		}
+		.option:hover
+		{
+			background: rgba(255,255,255,0.4);
+		}
+		.option:active
+		{
+			background: rgba(255,255,255,0.7);
+		}
+		.signinp
+		{
+			font-size: 25px;
+			font-family: verdana;
+			position: absolute;
+			color: #fff;
+			left: 110px;
+			top: 0;
+			z-index: 3;
+		}
+		.ma,.ma2,.ma3
+		{
+			width: 49%;
+			box-shadow: 0 0 20px black;
+			border-radius: 20px;
+			padding-bottom: 40px;
+			background: #fff;
+			position: relative;
+			top: 25px;
+		}
+		.ma
+		{
+			float: left;
+		}
+		.ma2
+		{
+			position: relative;
+			right: -6px;
+			float: right;
+		}
+		.ma3
+		{
+			float: left;
+			top: 60px;
+		}
+		.main
+		{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.head
+		{
+			font-family: verdana;
+			font-size: 30px;
+			color: black;
+		}
+		.ans
+		{
+			font-family: verdana;
+			font-size: 25px;
+			position: relative;
+			left: 5%;
+			width: 94%;
+			color: dodgerblue;
+		}
+		.a
+		{
+			text-decoration: none;
+			font-size: 25px;
+			color: #fff;
+			background: orange;
+			border-radius: 10px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 20px;
+			padding-right: 20px;
+		
+		}
+	</style>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------For Mobile--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	<style>
+		.menuicon
+		{
+			display: none;
+			height: 30px;
+			width: 30px;
+			position: absolute;
+			top: 9px;
+			left: 10px;
+			z-index: 6;
+			padding-top: 5px;
+			padding-left: 7px;
+			padding-bottom: 5px;
+			padding-right: 7px;
+			border-radius: 5px;
+			background: dodgerblue;
+			cursor: pointer;
+		}
+		.menuiconcheck
+		{
+			opacity: 0;
+			height: 30px;
+			width: 30px;
+			position: absolute;
+			top: 9px;
+			left: 10px;
+			z-index: 7;
+			cursor: pointer;
+		}
+		@media (max-width:768px)
+		{
+			.ans
+			{
+				font-size: 20px;
+			}
+			.ma,.ma2,.ma3
+			{
+				width: 95%;
+				padding: 10px;
+				float: none;
+				padding-bottom: 30px;
+			}
+			.ma2
+			{
+				top: 50px;
+				left: 0px;
+			}
+			.ma3
+			{
+				top: 100px;
+			}
+			.a
+			{
+				font-size: 22px;
+				padding-top: 7px;
+				padding-bottom: 7px;
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+			body
+			{
+				margin: 4px;
+			}
+			.menubar
+			{
+				position: absolute;
+				width: 60%;
+				border-radius: 3px;
+				transition: 2s;
+				height: 300px;
+				display: none;
+				z-index: 4;
+			}
+			.profile
+			{
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+				background: #fff;
+				position: absolute;
+				left: 70px;
+				top: 10px;
+				cursor: pointer;
+				z-index: 3;
+			}
+			.signinp
+			{
+				font-size: 15px;
+				font-family: verdana;
+				position: absolute;
+				color: #fff;
+				left: 105px;
+				top: 0px;
+				z-index: 3;
+			}
+			.option
+			{
+				font-size: 22px;
+				font-family: Verdana;
+				top: 50px;
+				text-align: center;
+				position: relative;	
+				color: white;
+				width: 100%;
+				padding-left: 0px;
+				padding-right: 0px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				text-decoration: none;
+				z-index: 3;
+			
+			}
+			.menuicon,.menuiconcheck
+			{
+				display: block;
+			}
+			.menuiconcheck:checked ~ .menubar
+			{
+				display: block;
+			}
+			.top
+			{
+				width: 150px;
+				height: 150px;
+			}
+			.topp
+			{
+				font-size: 29px;
+				position: absolute;
+				left: 47px;
+				top: 20px;
+			}
+		}
+	</style>
+	<img class="menuicon" src="Icons\unnamed.png"></img>
+	<input type="checkbox" name="" class="menuiconcheck">
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------For Mobile End--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	<div class="menubar">
+	<b>
+		<a href="Sign In.html">
+			<div class="profile">				
+				<img class="signinper" src="Princess Mononoke\Person.png">
+			</div>
+			<p class="signinp">Sign Up</p>
+		</a>
+		<a href="Details.html" class="option">Details</a>
+		<a href="More.html" class="option">More</a>
+		<a href="#" class="option">About</a>
+		<a href="My Animes (Version 2.1).html" class="option">Home</a>
+		<a href="About (dark).html" class="option">Darkmode</a>
+	</b>
+	</div>
+	<b>
+	<div class="main">
+		<div class="ma">
+			<center><p class="head">My Animes</p></center>
+				<p class="map">
+					<ol>
+						<li class="ans">Not Support Darkmode</li>
+						<li class="ans">Not Available Menubar</li>												
+						<li class="ans">Not Available Home Page Link</li>
+						<li class="ans">Not Available Sign Up Link</li>
+						<li class="ans">Not Available Feedback Page Link</li>
+						<li class="ans">Not Available Follow Links</li>
+						<li class="ans">Old About Section</li>
+						<li class="ans">Not Available Preloader</li>
+						<li class="ans">Not Comfortable for Phone</li>
+					</ol>
+				</p>
+			<center><a class="a" href="My Animes.html">Link of this webpage</a></center>
+		</div>
+		<div class="ma2">
+			<center><p class="head">My Animes(Version 2)</p></center>
+				<p class="ma2p">
+					<ol>
+						<li class="ans">Now Support Darkmode</li>
+						<li class="ans">Available Menubar</li>												
+						<li class="ans">Available Home Page Link</li>
+						<li class="ans">Available Sign Up Link</li>
+						<li class="ans">Available Feedback Page Link</li>
+						<li class="ans">Available Follow Links</li>
+						<li class="ans">Modified About Section</li>
+						<li class="ans">Available Preloader</li>
+						<li class="ans">Now Comfortable for Phone</li>
+					</ol>
+				</p>
+			<center><a class="a" href="My Animes (Version 2).html">Link of this webpage</a></center>
+		</div>
+		<div class="ma3">
+			<center><p class="head">My Animes(Version 2.1)</p></center>
+				<p class="ma3p">
+					<ol>
+						<li class="ans">Added "I Want To Eat Your Pancreas" Anime Movie in List</li>
+						<li class="ans">Fixed Some Bugs</li>
+						<li class="ans">Sticky Menu Bar Available</li>
+					</ol>
+				</p>
+			<center><a class="a" href="My Animes (Version 2.1).html">Link of this webpage</a></center>
+		</div>
+	</div>
+	</b>
+</body>
+</html>

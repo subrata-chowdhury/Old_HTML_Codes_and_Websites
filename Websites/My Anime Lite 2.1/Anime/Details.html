@@ -1,0 +1,232 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style>
+		.con
+		{
+			position: relative;
+			top: 100px;
+			width: 95%;
+			box-shadow: 0 0 30px lightblue;
+			border-radius: 15px;
+			padding: 20px;
+			height: 100px;
+		}
+		.size
+		{
+			font-size: 18px;
+			font-family: verdana;
+			color: grey;
+			position: relative;
+			top: 10px;
+		}
+		.num
+		{
+			font-size: 35px;
+			float: right;
+			color: dodgerblue;
+		}
+		.unit
+		{
+			font-size: 18px;
+		}
+		.link
+		{
+			padding: 15px;
+			text-decoration: none;
+			font-size: 22px;
+			color: #fff;
+			border-radius: 10px;
+			background: dodgerblue;
+			position: relative;
+			top: 40px;
+			left: 85%;
+			
+		}
+		.menubar
+		{
+			width: 100%;
+			height: 70px;
+			background: dodgerblue;
+			border-radius: 5px;
+			position: fixed;
+			z-index: 4;
+		}
+		.profile
+		{
+			width: 55px;
+			height: 55px;
+			border-radius: 50%;
+			background: #fff;
+			position: absolute;
+			left: 40px;
+			top: 7px;
+			cursor: pointer;
+			z-index: 3;
+		}
+		.signinper
+		{
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			cursor: pointer;
+			z-index: 3;
+		}
+		.option
+		{
+			font-size: 25px;
+			font-family: Verdana;
+			top: 0;
+			position: relative;
+			float: right;
+			color: white;
+			padding-left: 35px;
+			padding-right: 35px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			text-decoration: none;
+			z-index: 3;
+		}
+		.option:hover
+		{
+			background: rgba(255,255,255,0.4);
+		}
+		.option:active
+		{
+			background: rgba(255,255,255,0.7);
+		}
+		.signinp
+		{
+			font-size: 25px;
+			font-family: verdana;
+			position: absolute;
+			color: #fff;
+			left: 110px;
+			top: -4px;
+			z-index: 3;
+		}
+	</style>
+	<div class="main">
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------For Mobile--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	<style>
+		.menuicon
+		{
+			display: none;
+			height: 30px;
+			width: 30px;
+			position: fixed;
+			top: 9px;
+			left: 10px;
+			z-index: 6;
+			padding-top: 5px;
+			padding-left: 7px;
+			padding-bottom: 5px;
+			padding-right: 7px;
+			border-radius: 5px;
+			background: dodgerblue;
+			cursor: pointer;
+		}
+		.menuiconcheck
+		{
+			opacity: 0;
+			height: 30px;
+			width: 30px;
+			position: fixed;
+			top: 9px;
+			left: 10px;
+			z-index: 7;
+			cursor: pointer;
+		}
+		@media (max-width:768px)
+		{
+			body
+			{
+				margin: 4px;
+			}
+			.menubar
+			{
+				position: fixed;
+				width: 60%;
+				border-radius: 3px;
+				transition: 2s;
+				height: 300px;
+				display: none;
+				z-index: 4;
+			}
+			.profile
+			{
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+				background: #fff;
+				position: absolute;
+				left: 70px;
+				top: 10px;
+				cursor: pointer;
+				z-index: 3;
+			}
+			.signinp
+			{
+				font-size: 15px;
+				font-family: verdana;
+				position: absolute;
+				color: #fff;
+				left: 105px;
+				top: 0px;
+				z-index: 3;
+			}
+			.option
+			{
+				font-size: 22px;
+				font-family: Verdana;
+				top: 50px;
+				text-align: center;
+				position: relative;	
+				color: white;
+				width: 100%;
+				padding-left: 0px;
+				padding-right: 0px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				text-decoration: none;
+				z-index: 3;
+			
+			}
+			.menuicon,.menuiconcheck
+			{
+				display: block;
+			}
+			.menuiconcheck:checked ~ .menubar
+			{
+				display: block;
+			}
+		</style>
+		<img class="menuicon" src="Icons\unnamed.png"></img>
+		<input type="checkbox" name="" class="menuiconcheck">
+		<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------For Mobile End--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<div class="menubar">
+			<b>
+			<a href="Sign In.html">
+				<div class="profile">
+					<img class="signinper" src="Princess Mononoke\Person.png">
+				</div>
+				<p class="signinp">Sign Up</p>
+			</a>
+			<a href="#" class="option">Details</a>
+			<a href="More.html" class="option">More</a>
+			<a href="About.html" class="option">About</a>
+			<a href="My Animes (Version 2.1).html" class="option">Home</a>
+			<a href="#" class="option">Darkmode</a>
+		</b>
+		</div>
+		<div class="con">
+			<b>
+			<span class="size">Total Size of this Web Page</span><span class="num">11.7<span class="unit">MB</span></span><br>
+			<a class="link" href="../../My Anime lite 2.1.zip" download>Download Source</a>
+			</b>
+		</div>
+	</div>
+</body>
+</html>

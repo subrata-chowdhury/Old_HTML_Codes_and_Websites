@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<link href="all.css">
+	<style type="text/css">
+		.loader-con
+		{
+
+ 			height: 100%;
+ 			width: 100%;
+ 			background: #fff;
+ 			z-index: 20;
+ 			position: fixed;
+ 			top: 0;
+ 			left: 0;
+		}
+		.loader1,.loader2,.loader3,.loader4,.loader5
+		{
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			border: 2px solid #fff;
+			position: absolute;
+			top: calc(50% - 20px);
+			box-shadow: 7px 7px 15px #FFDFDB;
+			animation: load_animation 1s linear infinite;
+		}
+		@keyframes load_animation
+		{
+			0%
+			{
+				top: calc(50% - 20px);
+			}
+			50%
+			{
+				top: calc(45% - 20px);
+			}
+			100%
+			{
+				top: calc(50% - 20px);
+			}
+		}
+		.loader1
+		{
+			background: linear-gradient(#FFAE3E,#FF880F);
+			left: calc(43%);
+			animation-delay: 0s;
+		}
+		.loader2
+		{
+			background: linear-gradient(#FF7D14,#FF6928);
+			left: calc(46%);
+			animation-delay: 0.1s;
+		}
+		.loader3
+		{
+			background: linear-gradient(#FF5538,#FF5A67);
+			left: calc(49%);
+			animation-delay: 0.3s;
+		}
+		.loader4
+		{
+			background: linear-gradient(#FF2D5C,#FF1C6C);
+			left: calc(52%);
+			animation-delay: 0.5s;
+		}
+		.loader5
+		{
+			background: linear-gradient(#FF0D79,#FF0383);
+			left: calc(55%);
+			animation-delay: 0.7s;
+		}
+		.bg
+		{
+			width: 100%;
+			min-height: 100vh;
+			background: url(wp3723790.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+		.main
+		{
+			width: 480px;
+			height: 580px;
+			background: rgba(255,255,255,0.9);
+			box-shadow: 0 0 50px rgba(0,0,0,0.7); 
+			border-radius: 20px;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,8%);
+		}
+		#fn,#sn,#p,#cp,#e
+		{
+			background: transparent;
+			border: 0;
+			border-bottom: 2px solid #000;
+			font-size: 22px;
+			font-family: verdana;
+			outline: none;
+			position: relative;
+			left: 50%;
+			top: 5px;
+			transform: translate(-50%,0%);
+			padding-top: 40px;
+			padding-left: 10px;
+			padding-right: 40px;
+			padding-bottom: 5px;
+		}
+		#cp
+		{
+			padding-top: 20px;
+		}
+		.sign-up
+		{
+			font-size: 1.7em;
+			position: relative;
+			top: 40px;
+			color: dodgerblue;
+			font-family: verdana;
+			animation: changecolor 5s linear infinite;
+		}
+		@keyframes changecolor
+		{
+			0%
+			{
+				filter: hue-rotate(0deg);
+			}
+			100%
+			{
+				filter: hue-rotate(360deg);
+			}
+		}
+		.para
+		{
+			font-size: 16px;
+			font-family: verdana;
+			position: relative;
+			left: 19%;
+			top: -10px;
+		}
+		#id
+		{
+			font-size: 18px;
+		}
+		.btn
+		{
+			padding-top: 10px;
+			padding-right: 20px;
+			padding-left: 20px;
+			padding-bottom: 10px;
+			position: absolute;
+			bottom: 35px;
+			background: dodgerblue;
+			color: #fff;
+			border-radius: 5px;
+			font-size: 20px;
+			font-family: verdana;
+			text-decoration: none;
+			left: 50%;
+			transform: translate(-50%,0);
+		}
+		#detect
+		{
+			
+			font-size: 16px;
+			font-family: verdana;
+		}
+		#kp
+		{
+			position: absolute;
+			left: 75%;
+			height: 30px;
+			width: 30px;
+			top: 43%;
+			-webkit-appearance: none;
+			outline: none;
+			cursor: pointer;
+		}
+		#pic
+		{
+			position: absolute;
+			height: 35px;
+			width: 35px;
+			left: 75%;
+			top: 43%;
+			z-index: -1;
+		}
+		.menu-bar
+		{
+			position: fixed;
+			width: 100%;
+			z-index: 2;
+			top: 0px;
+			left: 0;
+			background: dodgerblue;
+			padding: 15px;
+		}
+		.menu
+		{
+			font-size: 1.7em;
+			position: relative;
+			float: right;
+			top: 0px;
+			font-family: verdana;
+		}
+		.menu-link
+		{
+			text-decoration: none;
+			color: #fff;
+			transition: 0.4s;
+		}
+		.menu-link:hover
+		{
+			opacity: 0.7;
+		}
+		.login-form
+		{
+			font-size: 15px;
+			font-family: verdana;
+		}
+		#login-form-link
+		{
+			color: dodgerblue;
+			cursor: pointer;
+			text-decoration: none;
+		}
+		#menu-bar-icon
+		{
+			position: fixed;
+			width: 100%;
+			z-index: 3;
+			top: 0px;
+			left: 0;
+			background: dodgerblue;
+			height: 50px;
+			display: none;
+			animation:  1s;
+		}
+
+		#menu-bar-icon-line1,#menu-bar-icon-line2,#menu-bar-icon-line3
+		{
+			width: 35px;
+			height: 5px;
+			background: #fff;
+			position: relative;
+			top: 3px;
+			left: 5px;
+			margin: 7px;
+			transition: 0.5s;
+			border-radius: 1.5px;
+		}
+		#menu-bar-check
+		{
+			width: 50px;
+			height: 50px;
+			position: fixed;
+			top: -5px;
+			left: -5px;
+			cursor: pointer;
+			z-index: 3;
+			-webkit-appearance: none;
+			display: none;
+			outline: none;
+		}
+		@media (max-width: 1138px)
+		{
+			.menu-bar
+			{
+				width: 300px;
+				height: 100%;
+				left: -500px;
+				transition: 0.5s;
+			}
+			#menu-bar-icon
+			{
+				display: block;
+			}
+			#menu-bar-check
+			{
+				display: block;
+			}
+			.menu
+			{
+				height: 60px;
+				left: 20px;
+				float: none;
+				top: 160px;
+			}
+			.menu-link
+			{
+				font-size: 32px;
+			}
+			.sign-up-pic
+			{
+				display: none;
+			}
+			.sign-up-para
+			{
+				top: 75px;
+				font-size: 32px;
+				width: 180px;
+				left: 20px;
+			}
+
+		}
+		@media (max-width:768px)
+		{
+			
+		}
+	</style>
+	
+	<script type="text/javascript">
+		window.onload = function() {loader()};
+		function loader() {
+			var a = document.getElementById('loader-con');
+			a.style.cssText = 'display: none;';
+		}
+		function detector() {
+			var d = document.getElementById('detect');
+			var a = document.getElementById('p');
+			var b = a.value;
+			var c = b.length;
+			if (c>=30) {
+				d.innerHTML = "Very Strong";
+				d.style.cssText = "color: green;";
+			} else if (c>=20) {
+				d.innerHTML = "Strong";
+				d.style.cssText = "color: dodgerblue;";
+			} else if (c>=8) {
+				d.innerHTML = "Normal";
+				d.style.cssText = "color: orange;";
+			} else if (c>=1) {
+				d.innerHTML = "Weak";
+				d.style.cssText = "color: red;";
+			} else {
+				d.innerHTML = " ";
+			}			
+		}
+		var interval = setInterval(detector, 100);
+		function viewpassword() {
+			var a = document.getElementById("kp");
+			var b = document.getElementById("p");
+			var d = document.getElementById("pic")
+			var e = document.getElementById("cp")
+			if (a.checked == true) {
+				b.type = "text";
+				e.type = "text";
+				d.src = "hide.svg"
+			} else {
+				b.type = "Password";
+				e.type = "Password";
+				d.src = "show.svg";
+			}
+		}
+		function menutocross() {
+			var a = document.getElementById('menu-bar-check');
+			var b = document.getElementById('menu-bar-icon-line1');
+			var c = document.getElementById('menu-bar-icon-line2');
+			var d = document.getElementById('menu-bar-icon-line3');
+			var e = document.getElementById('menu-bar');
+			if (a.checked == true) {
+				b.style.cssText = 'transform: rotate(45deg); width: 40px; top: 15px; left: -2px;';
+				c.style.cssText = 'display: none;';
+				d.style.cssText = 'transform: rotate(-45deg); width: 40px; left: -2px;';
+				e.style.cssText = 'left: 0px;'
+			} else {
+				b.style.cssText = "";
+				c.style.cssText = '';
+				d.style.cssText = "";
+				e.style.cssText = '';
+			}
+		}
+	</script>
+	
+</head>
+<body>
+	<b>
+	<div class="loader-con" id="loader-con">
+		<div class="loader1"></div>
+		<div class="loader2"></div>
+		<div class="loader3"></div>
+		<div class="loader4"></div>
+		<div class="loader5"></div>
+	</div>
+	<div id="menu-bar-icon">
+		<input type="checkbox" id="menu-bar-check" onclick="menutocross()">
+		<div id="menu-bar-icon-line1"></div>
+		<div id="menu-bar-icon-line2"></div>
+		<div id="menu-bar-icon-line3"></div>
+	</div>
+	<div class="menu-bar" id="menu-bar">
+		<div class="menu" style="width: 210px;"><a href="Contact Me.html" class="menu-link" id="ass">Contact Me</a></div>
+		<div class="menu" style="width: 150px;"><a href="More.html" class="menu-link">More</a></div>
+		<div class="menu" style="width: 160px;"><a href="Details.html" class="menu-link">Details</a></div>
+		<div class="menu" style="width: 210px;">
+			<a href="Sign Up (Dark).html" class="menu-link" id="darkpara">Darkmode</a>
+		</div>
+		<div class="menu" style="width: 150px;"><a href="../List Of All Doraemon Movies  (Version 3.5).html" class="menu-link">Home</a></div>
+	</div>
+	<div class="main" id="main">
+		<center>
+			<b>
+				<p class="sign-up" id="sign-up">My Animes</p>
+			</b>
+		</center>
+		<input type="text" name="" id="fn" placeholder="First Name" required><br>
+		<input type="text" name="" id="sn" placeholder="Second Name" required><br>
+		<input type="Password" name="" id="p" placeholder="A New Password" required><br>
+		<input type="checkbox" id="kp" name="" onclick="viewpassword()">
+		<img src="show.svg" id="pic">
+		<p class="para" id="para">Your Password is :<span id="detect"></span></p>
+		
+		<input type="Password" name="" id="cp" placeholder="Confirm Password" required><br>
+		<input type="email" name="" id="e" placeholder="Email Address" required>
+		<center>
+			<p class="login-form" id="login-form">Already have an Account? <span id="login-form-link"><a href="Login Form.html" id="login-form-link">Click here</a></span></p>
+		</center>
+		<a href="../List Of All Doraemon Movies  (Version 3.5).html" class="btn" id="btn">Sign Up</a>
+	</div>
+	<div class="bg"></div>
+	</b>
+</body>
+</html>

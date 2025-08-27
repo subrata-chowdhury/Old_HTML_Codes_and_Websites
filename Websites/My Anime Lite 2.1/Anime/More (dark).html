@@ -1,0 +1,278 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style>
+		body
+		{
+			background: #172727;
+		}
+		.bug,.contactme
+		{
+			position: relative;
+			width: 70%;
+			border-radius: 20px;
+			padding: 10px;
+			background: #172727;
+			border: 4px solid #172727;
+			box-shadow: 5px 5px 20px lightblue, 
+						inset 3px 3px 10px lightblue;
+		}
+		.bug
+		{
+			top: 30px;
+			height: 320px;
+		}
+		.contactme
+		{
+			top: 70px;
+			height: 400px;
+		}
+		.menubar
+		{
+			width: 100%;
+			height: 70px;
+			background: midnightblue;
+			border-radius: 5px;
+		}
+		.profile
+		{
+		  	width: 55px;
+		  	height: 55px;
+			border-radius: 50%;
+		    background: #fff;
+			position: absolute;
+			left: 40px;
+			top: 15px;
+			cursor: pointer;
+			z-index: 3;
+		}
+		.signinper
+		{
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			cursor: pointer;
+			z-index: 3;
+		}
+		.option
+		{
+			font-size: 25px;
+			font-family: Verdana;
+			top: 0;
+			position: relative;
+			float: right;
+			padding-left: 35px;
+			padding-right: 35px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			text-decoration: none;
+			z-index: 3;
+			color: #fff;
+		}
+		.option:hover
+		{
+			 background: rgba(255,255,255,0.4);
+		}
+		.option:active
+		{
+			background: rgba(255,255,255,0.7);
+		}
+		.signinp
+		{
+			font-size: 25px;
+			font-family: verdana;
+			position: absolute;
+			left: 110px;
+			top: 0;
+			color: #fff;
+			z-index: 3;
+		}
+		.head
+		{
+			font-family: verdana;
+			font-size: 30px;
+			color: #fff;
+		}
+		.buginput1,.buginput2,.email1,.email2,.email3
+		{
+			width: 80%;
+			height: 50px;
+			font-size: 20px;
+			color: #fff;
+			outline: none;
+			border: none;
+			position: relative;
+			background: transparent;
+			border-bottom: 2px solid #fff;
+		}
+		.buginput1
+		{
+			top: 25px;
+		}
+		.buginput2
+		{
+			top: 50px;
+		}
+		.email1
+		{
+			top: 25px;
+		}
+		.email2
+		{
+			top: 50px;
+		}
+		.email3
+		{
+		top: 75px;
+		}
+	</style>
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------For Mobile--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+	<style>
+		.menuicon
+		{
+			display: none;
+			height: 30px;
+			width: 30px;
+			position: absolute;
+			top: 9px;
+			left: 10px;
+			z-index: 6;
+			padding-top: 5px;
+			padding-left: 7px;
+			padding-bottom: 5px;
+			padding-right: 7px;
+			border-radius: 5px;
+			background: dodgerblue;
+			cursor: pointer;
+		}
+		.menuiconcheck
+		{
+			opacity: 0;
+			height: 30px;
+			width: 30px;
+			position: absolute;
+			top: 9px;
+			left: 10px;
+			z-index: 7;
+			cursor: pointer;
+		}
+		@media (max-width:768px)
+		{
+			.bug
+			{
+				width: 90%;
+				top: 10px;
+			}
+			.contactme
+			{
+				width: 90%;
+				top: 40px;
+			}
+			.buginput1,.buginput2,.email1,.email2,.email3
+			{
+				width: 90%;
+			}
+			body
+			{
+				margin: 4px;
+			}
+			.menubar
+			{
+				position: absolute;
+				width: 60%;
+				border-radius: 3px;
+				transition: 2s;
+				height: 300px;
+				display: none;
+				z-index: 4;
+			}
+			.profile
+			{
+				width: 25px;
+				height: 25px;
+				border-radius: 50%;
+				background: #fff;
+				position: absolute;
+				left: 70px;
+				top: 10px;
+				cursor: pointer;
+				z-index: 3;
+			}
+			.signinp
+			{
+				font-size: 15px;
+				font-family: verdana;
+				position: absolute;
+				color: #fff;
+				left: 105px;
+				top: 0px;
+				z-index: 3;
+			}
+			.option
+			{
+				font-size: 22px;
+				font-family: Verdana;
+				top: 50px;
+				text-align: center;
+				position: relative;	
+				color: white;
+				width: 100%;
+				padding-left: 0px;
+				padding-right: 0px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				text-decoration: none;
+				z-index: 3;
+			
+			}
+			.menuicon,.menuiconcheck
+			{
+				display: block;
+			}
+			.menuiconcheck:checked ~ .menubar
+			{
+				display: block;
+			}
+		}
+	</style>
+	<img class="menuicon" src="Icons\unnamed.png"></img>
+	<input type="checkbox" name="" class="menuiconcheck">
+	<!---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------For Mobile End--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+		<div class="menubar">
+			<b>
+			<a href="Sign In (dark).html">
+				<div class="profile">				
+					<img class="signinper" src="Princess Mononoke\Person.png">
+				</div>
+				<p class="signinp">Sign Up</p>
+			</a>
+			<a href="Details.html" class="option">Details</a>
+			<a href="More (dark).html" class="option">More</a>
+			<a href="About (dark).html" class="option">About</a>
+			<a href="My Animes (Version 2.1 Darkmode).html" class="option">Home</a>
+			<a href="More.html" class="option">Lightmode</a>
+			</b>
+		</div>
+		<b>
+		<div class="main">
+			<center>
+				<div class="bug">
+					<p class="head">If you got any bug then tell us</p>
+					<div class="bugdiv">
+						<input type="text" class="buginput1" placeholder="Type Your Email Address">
+						<input type="text" class="buginput2" placeholder="Type Bug">
+					</div>
+				</div>
+				<div class="contactme">
+					<p class="head">Contact Me</p>
+					<input type="text" class="email1" placeholder="Type Your Email Address">
+					<input type="text" class="email2" placeholder="Type Your Massage">
+					<input type="text" class="email3" placeholder="My Email Adress" value="myanime@gmail.com">
+				</div>
+			</center>
+		</div>
+		</b>
+</body>
+</html>

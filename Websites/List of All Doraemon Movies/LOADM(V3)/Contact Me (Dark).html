@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Me</title>
+	<style type="text/css">
+		.loader-con
+		{
+
+ 			height: 100%;
+ 			width: 100%;
+ 			background: #fff;
+ 			z-index: 20;
+ 			position: fixed;
+ 			top: 0;
+ 			left: 0;
+		}
+		.loader1,.loader2,.loader3,.loader4,.loader5
+		{
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			border: 2px solid #fff;
+			position: absolute;
+			top: calc(50% - 20px);
+			box-shadow: 7px 7px 15px #FFDFDB;
+			animation: load_animation 1s linear infinite;
+		}
+		@keyframes load_animation
+		{
+			0%
+			{
+				top: calc(50% - 20px);
+			}
+			50%
+			{
+				top: calc(45% - 20px);
+			}
+			100%
+			{
+				top: calc(50% - 20px);
+			}
+		}
+		.loader1
+		{
+			background: linear-gradient(#FFAE3E,#FF880F);
+			left: calc(43%);
+			animation-delay: 0s;
+		}
+		.loader2
+		{
+			background: linear-gradient(#FF7D14,#FF6928);
+			left: calc(46%);
+			animation-delay: 0.1s;
+		}
+		.loader3
+		{
+			background: linear-gradient(#FF5538,#FF5A67);
+			left: calc(49%);
+			animation-delay: 0.3s;
+		}
+		.loader4
+		{
+			background: linear-gradient(#FF2D5C,#FF1C6C);
+			left: calc(52%);
+			animation-delay: 0.5s;
+		}
+		.loader5
+		{
+			background: linear-gradient(#FF0D79,#FF0383);
+			left: calc(55%);
+			animation-delay: 0.7s;
+		}
+		.bg
+		{
+			width: 100%;
+			min-height: 100vh;
+			background: url(wp3723790.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+		.menu-bar
+		{
+			position: fixed;
+			width: 100%;
+			z-index: 2;
+			top: 0px;
+			left: 0;
+			background: midnightblue;
+			padding: 15px;
+		}
+		.menu
+		{
+			font-size: 1.7em;
+			position: relative;
+			float: right;
+			top: 0px;
+			font-family: verdana;
+		}
+		.menu-link
+		{
+			text-decoration: none;
+			color: #fff;
+			transition: 0.4s;
+		}
+		.sign-up-pic
+		{
+			width: 50px;
+			border-radius: 50%;
+			position: absolute;
+			top: 0px;
+			left: 5px;
+		}
+		.sign-up
+		{
+			position: absolute;
+			width: 200px;
+			top: 6px;
+			left: 20px;
+			text-decoration: none;
+			color: #fff;
+			z-index: 2;
+		}
+		.sign-up-para
+		{
+			font-size: 1.7em;
+			font-family: verdana;
+			position: absolute;
+			top: -20px;
+			left: 70px;
+		}
+		.sign-up-para:hover
+		{
+			opacity: 0.7;
+		}
+		.menu-link:hover
+		{
+			opacity: 0.7;
+		}
+		.bug-container
+		{
+			width: 450px;
+			height: 420px;
+			background: #172727;
+			position: relative;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,10%);
+			border-radius: 20px;
+			box-shadow: 0 0 25px rgba(255,255,255,0.6),
+						0 0 40px 500vh rgba(0,0,0,0.7);
+		}
+		#e-mail,#bug,#e-mail-2
+		{
+			background: transparent;
+			border: 0;
+			border-bottom: 2px solid #fff;
+			font-size: 22px;
+			font-family: verdana;
+			outline: none;
+			position: relative;
+			top: 10px;
+			padding-top: 40px;
+			padding-left: 10px;
+			padding-right: 40px;
+			padding-bottom: 5px;
+			color: #fff;
+		}
+		#btn
+		{
+			padding-top: 10px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-bottom: 10px;
+			background: dodgerblue;
+			text-decoration: none;
+			font-size: 22px;
+			font-family: verdana;
+			color: #fff;
+			border-radius: 10px;
+		}
+		.bug-head
+		{
+			font-family: verdana;
+			font-size: 24px;
+			position: relative;
+			top: 40px;
+			color: #fff;
+		}
+		#menu-bar-icon
+		{
+			position: fixed;
+			width: 100%;
+			z-index: 3;
+			top: 0px;
+			left: 0;
+			background: midnightblue;
+			height: 50px;
+			display: none;
+			animation:  1s;
+		}
+
+		#menu-bar-icon-line1,#menu-bar-icon-line2,#menu-bar-icon-line3
+		{
+			width: 35px;
+			height: 5px;
+			background: #fff;
+			position: relative;
+			top: 3px;
+			left: 5px;
+			margin: 7px;
+			transition: 0.5s;
+			border-radius: 1.5px;
+		}
+		#menu-bar-check
+		{
+			width: 50px;
+			height: 50px;
+			position: fixed;
+			top: -5px;
+			left: -5px;
+			cursor: pointer;
+			z-index: 3;
+			-webkit-appearance: none;
+			display: none;
+			outline: none;
+		}
+		@media (max-width: 1138px)
+		{
+			.menu-bar
+			{
+				width: 300px;
+				height: 100%;
+				left: -500px;
+				transition: 0.5s;
+			}
+			#menu-bar-icon
+			{
+				display: block;
+			}
+			#menu-bar-check
+			{
+				display: block;
+			}
+			.menu
+			{
+				height: 60px;
+				left: 20px;
+				float: none;
+				top: 160px;
+			}
+			.menu-link
+			{
+				font-size: 32px;
+			}
+			.sign-up-pic
+			{
+				display: none;
+			}
+			.sign-up-para
+			{
+				top: 75px;
+				font-size: 32px;
+				width: 180px;
+				left: 20px;
+			}
+
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function() {loader()};
+		function loader() {
+			var a = document.getElementById('loader-con');
+			a.style.cssText = 'display: none;';
+		}
+		function menutocross() {
+			var a = document.getElementById('menu-bar-check');
+			var b = document.getElementById('menu-bar-icon-line1');
+			var c = document.getElementById('menu-bar-icon-line2');
+			var d = document.getElementById('menu-bar-icon-line3');
+			var e = document.getElementById('menu-bar');
+			if (a.checked == true) {
+				b.style.cssText = 'transform: rotate(45deg); width: 40px; top: 15px; left: -2px;';
+				c.style.cssText = 'display: none;';
+				d.style.cssText = 'transform: rotate(-45deg); width: 40px; left: -2px;';
+				e.style.cssText = 'left: 0px;'
+			} else {
+				b.style.cssText = "";
+				c.style.cssText = '';
+				d.style.cssText = "";
+				e.style.cssText = '';
+			}
+		}
+	</script>
+</head>
+<body id="body">
+	<div class="loader-con" id="loader-con">
+		<div class="loader1"></div>
+		<div class="loader2"></div>
+		<div class="loader3"></div>
+		<div class="loader4"></div>
+		<div class="loader5"></div>
+	</div>
+	<div class="main">
+		<b>
+			<div id="menu-bar-icon">
+				<input type="checkbox" id="menu-bar-check" onclick="menutocross()">
+				<div id="menu-bar-icon-line1"></div>
+				<div id="menu-bar-icon-line2"></div>
+				<div id="menu-bar-icon-line3"></div>
+			</div>
+		<img src="" class="main-img">
+		<div class="menu-bar" id="menu-bar">
+			<a href="Sign Up (Dark).html" class="sign-up">
+				<img src="Person.png" class="sign-up-pic">
+				<p class="sign-up-para">Sign Up</p>
+			</a>
+			<div class="menu" style="width: 210px;"><a href="#" class="menu-link" id="ass" style="opacity: 0.7;">Contact Me</a></div>
+			<div class="menu" style="width: 150px;"><a href="More (Dark).html" class="menu-link">More</a></div>
+			<div class="menu" style="width: 160px;"><a href="Details (Dark).html" class="menu-link">Details</a></div>
+			<div class="menu" style="width: 210px;">
+				<a href="Contact Me.html" class="menu-link" id="darkpara">Lightmode</a>
+			</div>
+			<div class="menu" style="width: 150px;"><a href="../List Of All Doraemon Movies  (Version 3.5)(Dark).html" class="menu-link">Home</a></div>
+		</div>
+		<div class="bug-container" id="bug-container">
+			<center>
+				<p class="bug-head" id="bug-head">Contact Me</p>
+				<br>
+				<input type="text" name="" id="e-mail" placeholder="Email Address">
+				<br>
+				<input type="text" name="" id="e-mail-2" placeholder="Message">
+				<br>
+				<input type="text" name="" id="bug" value="subratachowdhury7000@gmail.com" readonly="">
+				<br>
+				<br>
+				<br>
+				<br>
+				<a href="#" id="btn">Send</a>
+			</center>
+		</div>
+		<div class="bg"></div>
+		</b>
+	</div>
+</body>
+</html>
